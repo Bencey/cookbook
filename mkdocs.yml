@@ -1,0 +1,49 @@
+site_name: Bencey's Cookbook
+site_description: Bencey's Cookbook is a collection of guides for a wide variety of things such as docker swarm, Installation Guides, Reviews, and more
+site_author: Benjamin Durham
+copyright: 'Copyright &copy; 2020 - 2020 Benjamin Durham, Tier III Technologies'
+
+
+nav:
+  - Home: 
+      - Welcome: index.md
+      - About: about.md
+  - Docker Guides: 
+      - Setup: docker/setup.md
+      - Guides:
+        - Traefikv2: docker/traefikv2.md
+
+
+# Commented out during development
+google_analytics:
+  - UA-121177053-7
+  - auto
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/bencey4
+    - icon: fontawesome/brands/github
+      link: https://github.com/Bencey
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/benjamin-durham-324275178/
+
+theme:
+  name: material
+  favicon: images/favicon.png
+  logo: images/logo.png
+  palette:
+    scheme: slate
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - search.highlight
+    - header.autohide
+
+plugins:
+  - search:
+      prebuild_index: true
+
+
+markdown_extensions:
+  - admonition
