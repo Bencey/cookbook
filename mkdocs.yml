@@ -3,6 +3,8 @@ site_description: Bencey's Cookbook is a collection of guides for a wide variety
 site_author: Benjamin Durham
 copyright: 'Copyright &copy; 2020 - 2020 Benjamin Durham, Tier III Technologies'
 
+repo_url: https://github.com/Bencey/cookbook
+
 
 nav:
   - Home: 
@@ -32,6 +34,8 @@ theme:
   name: material
   favicon: images/favicon.png
   logo: images/logo.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
     scheme: slate
   features:
