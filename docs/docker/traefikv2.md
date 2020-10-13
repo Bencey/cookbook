@@ -6,7 +6,7 @@ In my docker swarm I use traefik (Version 2) as my reverse proxy for all of my s
 
 ### Guide
 
-1. The first thing you will need to do is to create the traefik network, In this guide the Directory I have used is /var/data/config/traefik and in this directory I have a file called traefik.yml. The file contains the following
+The first thing you will need to do is to create the traefik network, In this guide the Directory I have used is /var/data/config/traefik and in this directory I have a file called traefik.yml. The file contains the following
 
 
 
@@ -35,7 +35,7 @@ networks:
 This creates a network that allows traefik to attach itself to.
 
 
-2. You will need to start preparing your traefik files. The directory I have used is /var/data/config/traefikv2/ In this directory I have 2 files. `traefik.toml` and `traefikv2.yml`
+You will now need to start preparing your traefik files. The directory I have used is /var/data/config/traefikv2/ In this directory I have 2 files. `traefik.toml` and `traefikv2.yml`
 
 
 ### Prepare traefik.toml
@@ -105,4 +105,4 @@ So now all you will need to edit is the Host so matches your domain. Then you wi
 
 
 
-3. Now it is time to deploy your services. First you will need to deploy the network using `docker stack deploy -c traefik /var/data/config/traefik/traefik.yml`, wait until it has deployed then deploy traefikv2 using `docker stack deploy -c traefikv2 /var/data/config/traefikv2/traefikv2`. You will be able to view the status of the services by running `docker stack ps traefikv2`
+Now it is time to deploy your services. First you will need to deploy the network using `docker stack deploy -c traefik /var/data/config/traefik/traefik.yml`, wait until it has deployed then deploy traefikv2 using `docker stack deploy -c traefikv2 /var/data/config/traefikv2/traefikv2`. You will be able to view the status of the services by running `docker stack ps traefikv2`
