@@ -4,13 +4,18 @@ Traefik is an open source reverse proxy and load balancer that allows you to dep
 In my docker swarm I use traefik (Version 2) as my reverse proxy for all of my services (Even homeassistant which isnt running on my swarm). In this guide I will be teaching you how to install traefik Version 2 so you can use it on your dockerswarm
 
 
+### Requirements
+
+* Docker Swarm Setup
+
+
 ### Guide
 
-1. The first thing you will need to do is to create the traefik network, In this guide the Directory I have used is /var/data/config/traefik and in this directory I have a file called traefik.yml. The file contains the following
+The first thing you will need to do is to create the traefik network, In this guide the Directory I have used is /var/data/config/traefik and in this directory I have a file called traefik.yml. The file contains the following
 
 
 
-### Prepare Traefik.yml
+### Prepare traefik.yml
 
 ```
 version: "3.2"
@@ -35,7 +40,7 @@ networks:
 This creates a network that allows traefik to attach itself to.
 
 
-2. You will need to start preparing your traefik files. The directory I have used is /var/data/config/traefikv2/ In this directory I have 2 files. `traefik.toml` and `traefikv2.yml`
+You will now need to start preparing your traefik files. The directory I have used is /var/data/config/traefikv2/ In this directory I have 2 files. `traefik.toml` and `traefikv2.yml`
 
 
 ### Prepare traefik.toml
@@ -72,7 +77,7 @@ This creates a network that allows traefik to attach itself to.
 ```
 
 
-### Prepare Traefikv2.yml
+### Prepare traefikv2.yml
 
 ```
 version: "3.8"
@@ -104,5 +109,6 @@ networks:
 So now all you will need to edit is the Host so matches your domain. Then you will need to create an A record in your DNS host for traefik.domain.com and point it at the public IP of the network the device is running on. I must warn you that at this point you do not have any authentication setup so once you deploy the service anyone is able to access your website. In the future I will be publishing a guide on how to protect your services using authelia
 
 
+### Deploying 
 
-3. Now it is time to deploy your services. First you will need to deploy the network using `docker stack deploy -c traefik /var/data/config/traefik/traefik.yml`, wait until it has deployed then deploy traefikv2 using `docker stack deploy -c traefikv2 /var/data/config/traefikv2/traefikv2`. You will be able to view the status of the services by running `docker stack ps traefikv2`
+Now it is time to deploy your services. First you will need to deploy the network using `docker stack deploy -c traefik /var/data/config/traefik/traefik.yml`, wait until it has deployed then deploy traefikv2 using `docker stack deploy -c traefikv2 /var/data/config/traefikv2/traefikv2`. You will be able to view the status of the services by running `docker stack ps traefikv2`

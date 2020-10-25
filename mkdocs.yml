@@ -4,7 +4,7 @@ site_author: Benjamin Durham
 copyright: 'Copyright &copy; 2020 - 2020 Benjamin Durham, Tier III Technologies'
 
 repo_url: https://github.com/Bencey/cookbook
-
+edit_uri: edit/main/docs/
 
 nav:
   - Home: 
