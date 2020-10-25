@@ -14,6 +14,12 @@ nav:
       - Setup: docker/setup.md
       - Guides:
         - Traefikv2: docker/traefikv2.md
+        - Bitwarden: docker/bitwarden.md
+        - HomeAssistant: docker/homeassistant.md
+  - Misc Guides: 
+      - TokoVoip Server Install: misc/tokoserver.md
+      - TokoVoip Client Install: misc/tokoclient.md
+
 
 
 # Commented out during development
