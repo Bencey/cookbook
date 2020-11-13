@@ -16,6 +16,8 @@ nav:
         - Traefikv2: docker/traefikv2.md
         - Bitwarden: docker/bitwarden.md
         - HomeAssistant: docker/homeassistant.md
+      - Tools:
+        - DNS Updater: docker/cloudflarednsupdater.md
   - Misc Guides: 
       - TokoVoip Server Install: misc/tokoserver.md
       - TokoVoip Client Install: misc/tokoclient.md
